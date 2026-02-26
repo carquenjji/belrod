@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELROD | Madison Beer</title>
     <link rel="icon" type="image/png" href="bel.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Fondo Beige y textos oscuros para contraste */
         body { background: #f5f5dc; color: #333; font-family: sans-serif; transition: all 0.5s ease; }
         
         .glass { 
@@ -15,20 +15,18 @@
             border: 1px solid rgba(199, 165, 131, 0.4); 
         }
 
-        /* Estilo para el botón de inicio de música */
         #music-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: #f5f5dc; z-index: 50; display: flex;
             align-items: center; justify-content: center;
         }
     </style>
-    <h1>BELROD | Madison Beer</h1>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-4">
 
     <div id="music-overlay">
-        <button onclick="startPage()" class="glass px-8 py-4 rounded-full font-bold tracking-widest hover:bg-[#c7a583] transition">
-            ENTRAR Y ESCUCHAR
+        <button onclick="startPage()" class="glass px-8 py-4 rounded-full font-bold tracking-widest hover:bg-[#c7a583] transition uppercase">
+            Entrar y Escuchar
         </button>
     </div>
 
@@ -36,41 +34,45 @@
         <source src="madison.mp3" type="audio/mpeg">
     </audio>
 
-   <h1 class="text-8xl font-black italic tracking-tighter text-[#1a1a1a]">BELROD</h1>
-<h2 class="text-xs tracking-[0.4em] text-gray-600 uppercase font-light">Madison Beer | Out Now</h2>
+    <div id="main-content" class="max-w-md w-full text-center space-y-8 opacity-0 transition-opacity duration-1000">
+        
+        <div>
+            <h1 class="text-8xl font-black italic tracking-tighter text-[#1a1a1a]">BELROD</h1>
+            <h2 class="text-xs tracking-[0.4em] text-gray-600 uppercase font-light mt-2">Madison Beer | Out Now</h2>
+        </div>
 
-<p class="text-sm text-[#8b6d4d] italic font-light px-4 leading-relaxed">
-    "Una exploración sonora entre el deseo y la realidad. Conoce mi musica y un poco sobre mi"
-</p BELROD es un artista independiente, rapero y escritor mexicano nacido en 2002, originario de Sahuayo de Morelos, Michoacán. BELROD se distingue por su versatilidad y su capacidad de fusionar el rap con múltiples géneros musicales.
-
-A lo largo de su proyecto, BELROD mezcla estilos como Pop, Rock Alternativo, Country, Deep House, House y Reggaetón, manteniendo siempre la esencia del rap como base de su sonido.
-
-Con letras honestas, emociones reales y una constante evolución, BELROD continúa construyendo su camino en la música, persiguiendo el sueño que lo ha acompañado desde niño.">
-</div>
+        <div class="space-y-4 px-2">
+            <p class="text-sm text-[#8b6d4d] italic font-medium leading-relaxed">
+                "Una exploración sonora entre el deseo y la realidad. Conoce mi música y un poco sobre mí."
+            </p>
+            <div class="glass p-4 rounded-xl text-xs text-gray-700 leading-relaxed text-justify">
+                BELROD es un artista independiente, rapero y escritor nacido en 2002, originario de Sahuayo de Morelos, Michoacán. Se distingue por su versatilidad y su capacidad de fusionar el rap con géneros como Pop, Rock Alternativo, Country, Deep House y Reggaetón, manteniendo siempre la esencia del rap como base de su sonido. Con letras honestas y constante evolución, continúa construyendo su camino en la música.
+            </div>
+        </div>
 
         <div class="aspect-square w-full glass rounded-2xl overflow-hidden shadow-2xl">
             <img src="madisonbeer.jpg" alt="Madison Beer Single Cover" class="w-full h-full object-cover">
         </div>
 
         <div class="grid gap-3">
-            <a href="https://open.spotify.com/intl-es/artist/3H8A6qj9O1c9pIVz6NeDit?si=D3Oaqc1fQNyVLp_dXLIiIQ" class="glass p-4 rounded-xl flex justify-between items-center hover:bg-[#c7a583] hover:text-white transition">
+            <a href="https://open.spotify.com/artist/tu_id" class="glass p-4 rounded-xl flex justify-between items-center hover:bg-[#c7a583] hover:text-white transition">
                 <span class="font-bold uppercase tracking-widest text-lg text-[#8b6d4d]">Spotify</span>
-                <span class="text-xs text-gray-600">DISPONIBLE AHORA</span>
+                <span class="text-xs text-gray-600">ESCUCHAR</span>
             </a>
             
             <a href="https://www.youtube.com/@BELROD23" class="glass p-4 rounded-xl flex justify-between items-center hover:bg-[#c7a583] hover:text-white transition">
                 <span class="font-bold uppercase tracking-widest text-lg text-[#8b6d4d]">YouTube</span>
-                <span class="text-xs text-gray-600">VIDEO OFICIAL</span>
+                <span class="text-xs text-gray-600">MIRA</span>
             </a>
             
             <a href="https://www.tiktok.com/@belr0d" class="glass p-4 rounded-xl flex justify-between items-center hover:bg-[#c7a583] hover:text-white transition">
                 <span class="font-bold uppercase tracking-widest text-lg text-[#8b6d4d]">TikTok</span>
-                <span class="text-xs text-gray-600">CONTENIDO ACTUAL</span>
+                <span class="text-xs text-gray-600">LIKE</span>
             </a>
             
             <a href="https://www.instagram.com/ibelrod/" class="glass p-4 rounded-xl flex justify-between items-center hover:bg-[#c7a583] hover:text-white transition">
                 <span class="font-bold uppercase tracking-widest text-lg text-[#8b6d4d]">Instagram</span>
-                <span class="text-xs text-gray-600">PERFIL OFICIAL</span>
+                <span class="text-xs text-gray-600">SÍGUEME</span>
             </a>
         </div>
 
@@ -85,7 +87,7 @@ Con letras honestas, emociones reales y una constante evolución, BELROD contin�
             const overlay = document.getElementById('music-overlay');
             const content = document.getElementById('main-content');
             
-            music.play();
+            music.play().catch(e => console.log("Audio play failed:", e));
             overlay.style.display = 'none';
             content.classList.remove('opacity-0');
             content.classList.add('opacity-100');
@@ -93,6 +95,3 @@ Con letras honestas, emociones reales y una constante evolución, BELROD contin�
     </script>
 </body>
 </html>
-
-
-
