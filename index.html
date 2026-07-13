@@ -18,8 +18,78 @@
             background-color: #2c3e50;
             color: #fff;
             padding: 1rem 0;
+            text-align: center;
         }
-    </script>
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #34495e;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a mi Sitio Web</h1>
+        <p>Creado con pasión y código limpio</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main class="container">
+        <section id="inicio">
+            <h2>Sobre el Proyecto</h2>
+            <p>Este es el punto de partida de tu nueva aventura en la web. He estructurado este archivo utilizando etiquetas semánticas de HTML5 (como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> y <code>&lt;footer&gt;</code>), lo cual es excelente para el SEO y la accesibilidad.</p>
+        </section>
+        
+        <hr>
+
+        <section id="servicios">
+            <h2>¿Qué podemos construir?</h2>
+            <p>A partir de aquí, las posibilidades son infinitas. Puedes añadir:</p>
+            <ul>
+                <li>Formularios de contacto interactivos.</li>
+                <li>Integración con frameworks de diseño como Tailwind CSS o Bootstrap.</li>
+                <li>Componentes dinámicos con JavaScript o frameworks modernos.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Diseñado con fines de aprendizaje</p>
+    </footer>
+
 </body>
 </html>
-
