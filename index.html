@@ -3,92 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A UNA LLAMADA DEL AMOR</title>
+    <title>Maniquíes El Flaco - Tienda Falsa de Gente Rígida</title>
     <style>
+        :root {
+            --primary: #d32f2f;
+            --secondary: #2c3e50;
+            --bg: #f9f9f9;
+            --card-bg: #ffffff;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: ##FFD1DC;
-            color: #FF0000;
+            background-color: var(--bg);
+            color: #333;
         }
+
         header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #34495e;
-        }
-        nav a {
+            background-color: var(--secondary);
             color: white;
-            padding: 14px 20px;
-            text-decoration: none;
             text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 5px solid var(--primary);
         }
-        nav a:hover {
-            background-color: #1abc9c;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-style: italic;
+            color: #bdc3c7;
+        }
+
         .container {
-            width: 80%;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 2rem auto;
-            background: #fff;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
         }
+
+        /* Secciones adaptativas para móviles */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Catálogo de Productos */
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .producto-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Marcador de posición para imagen (puedes poner URLs reales luego) */
+        .producto-img {
+            background: #eee;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .producto-card h3 {
+            margin: 0.5rem 0;
+            color: var(--secondary);
+        }
+
+        .descripcion {
+            font-size: 0.9rem;
+            color: #666;
+            min-height: 50px;
+        }
+
+        .precio {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .btn-agregar {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-agregar:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Carrito de Compras lateral */
+        .carrito {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: fit-content;
+            border-top: 4px solid var(--primary);
+        }
+
+        .lista-carrito {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .lista-carrito li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .total-contenedor {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 1rem;
+        }
+
+        .btn-pagar {
+            width: 100%;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .btn-pagar:hover {
+            background-color: #219653;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
-            background: #2c3e50;
+            background: var(--secondary);
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-sizing: border-box;
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>A UNA LLAMADA DEL AMOR</h1>
-        <p>Consigue el número del AMOR DE TU VIDA por un precio increible</p>
+        <h1>Maniquíes "El Flaco"</h1>
+        <p>No parpadean, no piden aumentos, no juzgan tus gustos de moda.</p>
     </header>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-
-    <main class="container">
-        <section id="inicio">
-            <h2>Sobre el Proyecto</h2>
-            <p>Este es el punto de partida de tu nueva aventura en la web. He estructurado este archivo utilizando etiquetas semánticas de HTML5 (como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> y <code>&lt;footer&gt;</code>), lo cual es excelente para el SEO y la accesibilidad.</p>
-        </section>
+    <div class="container">
         
-        <hr>
+        <!-- Sección de productos -->
+        <main>
+            <h2>Nuestro Catálogo "Premium"</h2>
+            <div class="catalogo">
+                
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <div class="producto-img">🧍‍♂️</div>
+                    <h3>El "Mirada Juzgadora"</h3>
+                    <p class="descripcion">Viene preconfigurado con una expresión de decepción ideal para ahuyentar clientes indecisos.</p>
+                    <p class="precio">$120.00</p>
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Mirada Juzgadora', 120)">Añadir al Carrito</button>
+                </div>
 
-        <section id="servicios">
-            <h2>¿Qué podemos construir?</h2>
-            <p>A partir de aquí, las posibilidades son infinitas. Puedes añadir:</p>
-            <ul>
-                <li>Formularios de contacto interactivos.</li>
-                <li>Integración con frameworks de diseño como Tailwind CSS o Bootstrap.</li>
-                <li>Componentes dinámicos con JavaScript o frameworks modernos.</li>
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <div class="producto-img">🧍‍♀️</div>
+                    <h3>La "Sin Cabeza" (Literal)</h3>
+                    <p class="descripcion">Perfecto si te da pereza peinarlos o si tienes problemas de presupuesto para rostros.</p>
+                    <p class="precio">$85.00</p>
+                    <button class="btn-agregar" onclick="agregarAlCarrito('La Sin Cabeza', 85)">Añadir al Carrito</button>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <div class="producto-img">🤸‍♂️</div>
+                    <h3>El Maniquí de Acción</h3>
+                    <p class="descripcion">En una pose tan incómoda e irreal que la ropa de deporte parecerá extrema.</p>
+                    <p class="precio">$150.00</p>
+                    <button class="btn-agregar" onclick="agregarAlCarrito('Maniquí de Acción', 150)">Añadir al Carrito</button>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Barra lateral del carrito -->
+        <aside class="carrito">
+            <h2>🛒 Tu Carrito</h2>
+            <ul id="lista-carrito" class="lista-carrito">
+                <!-- Los productos se añadirán aquí con JavaScript -->
+                <li id="carrito-vacio">El carrito está tan vacío como los ojos de nuestros maniquíes.</li>
             </ul>
-        </section>
-    </main>
+            <div class="total-contenedor">
+                Total: $<span id="total-precio">0.00</span>
+            </div>
+            <button class="btn-pagar" onclick="procesarPago()">Proceder al "Pago"</button>
+        </aside>
+
+    </div>
 
     <footer>
-        <p>&copy; 2026 - Diseñado con fines de aprendizaje</p>
+        <p>&copy; 2026 Maniquíes El Flaco S.A. | Ningún maniquí fue herido en la creación de esta web de práctica.</p>
     </footer>
 
+    <!-- Lógica de la tienda (JavaScript) -->
+    <script>
+        let carritoItems = [];
+        let total = 0;
+
+        function agregarAlCarrito(nombre, precio) {
+            // Eliminar el mensaje de vacío la primera vez
+            const mensajeVacio = document.getElementById('carrito-vacio');
+            if (mensajeVacio) mensajeVacio.remove();
+
+            // Agregar al arreglo
+            carritoItems.push({ nombre, precio });
+            total += precio;
+
+            // Renderizar en la lista
+            const lista = document.getElementById('lista-carrito');
+            const nuevoItem = document.createElement('li');
+            nuevoItem.innerHTML = <span>${nombre}</span> <span>$${precio}.00</span>;
+            lista.appendChild(nuevoItem);
+
+            // Actualizar total
+            document.getElementById('total-precio').innerText = total.toFixed(2);
+        }
+
+        function procesarPago() {
+            if (carritoItems.length === 0) {
+                alert("¡Primero añade un maniquí! No nos dejes plantados.");
+                return;
+            }
+            alert(¡Simulación de compra exitosa! Has gastado $${total}.00 en plástico inanimado de alta calidad. Tu profesor estará orgulloso.);
+            
+            // Reiniciar carrito
+            carritoItems = [];
+            total = 0;
+            document.getElementById('lista-carrito').innerHTML = '<li id="carrito-vacio">El carrito está tan vacío como los ojos de nuestros maniquíes.</li>';
+            document.getElementById('total-precio').innerText = '0.00';
+        }
+    </script>
 </body>
 </html>
