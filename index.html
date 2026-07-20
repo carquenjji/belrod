@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A UNA LLAMADA DEL AMOR</title>
+    <link rel="icon" type="image/png" href="LOGOTV.png">
+    
     <style>
         :root {
             --primary: #04d416;
@@ -28,6 +30,17 @@
             border-bottom: 5px solid var(--primary);
         }
 
+
+        .logo-principal {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            object-fit: cover;
+            background-color: white; 
+        }
+
         header h1 {
             margin: 0;
             font-size: 2.5rem;
@@ -48,14 +61,12 @@
             gap: 2rem;
         }
 
-        /* Secciones adaptativas para móviles */
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Catálogo de Productos */
         .catalogo {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -118,7 +129,6 @@
             background-color: #b71c1c;
         }
 
-        /* Carrito de Compras lateral */
         .carrito {
             background: var(--card-bg);
             padding: 1.5rem;
@@ -177,6 +187,9 @@
 <body>
 
     <header>
+        
+        <img src="LOGOTV.png" alt="Logo A una llamada del amor" class="logo-principal">
+        
         <h1>A UNA LLAMADA DEL AMOR</h1>
         <p>Compra el número de tu crush o persona que te guste por un comodo precio</p>
     </header>
@@ -218,7 +231,6 @@
             </div>
         </main>
 
-        <!-- Barra lateral del carrito -->
         <aside class="carrito">
             <h2>🛒 Tu Carrito</h2>
             <ul id="lista-carrito" class="lista-carrito">
@@ -234,10 +246,9 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 A una llamada del amor | Todas las personas estan aqui con su consentimiento :3|By: Gringosh</p>
+        <p>&copy; 2026 A una llamada del amor | Todas las personas estan aqui con su consentimiento :3 | By: Gringosh</p>
     </footer>
 
-    <!-- Lógica de la tienda (JavaScript) -->
     <script>
         let carritoItems = [];
         let total = 0;
@@ -253,7 +264,6 @@
             const lista = document.getElementById('lista-carrito');
             const nuevoItem = document.createElement('li');
             
-            // CORRECCIÓN: Uso de backticks (`) para inyectar las variables HTML
             nuevoItem.innerHTML = `<span>${nombre}</span> <span>$${precio}.00</span>`;
             lista.appendChild(nuevoItem);
 
@@ -266,7 +276,6 @@
                 return;
             }
             
-            // CORRECCIÓN: Uso de backticks (`) para inyectar la variable total en el alert
             alert(`Felicidades!! Has gastado $${total}.00 En el proximo amor de tu vida`);
             
             // Reiniciar carrito
