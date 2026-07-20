@@ -223,7 +223,7 @@
             <h2>🛒 Tu Carrito</h2>
             <ul id="lista-carrito" class="lista-carrito">
                 <!-- Los productos se añadirán aquí con JavaScript -->
-                <li id="carrito-vacio">El carrito está tan vacío como los ojos de nuestros maniquíes.</li>
+                <li id="carrito-vacio">El carrito esta tan vacio como tu sin nuestros producto.</li>
             </ul>
             <div class="total-contenedor">
                 Total: $<span id="total-precio">0.00</span>
@@ -234,7 +234,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 A una llamada del amor | Todas las personas estan aqui con su consentimiento :3</p>
+        <p>&copy; 2026 A una llamada del amor | Todas las personas estan aqui con su consentimiento :3|By: Gringosh</p>
     </footer>
 
     <!-- Lógica de la tienda (JavaScript) -->
@@ -247,17 +247,16 @@
             const mensajeVacio = document.getElementById('carrito-vacio');
             if (mensajeVacio) mensajeVacio.remove();
 
-            // Agregar al arreglo
             carritoItems.push({ nombre, precio });
             total += precio;
-
-            // Renderizar en la lista
+            
             const lista = document.getElementById('lista-carrito');
             const nuevoItem = document.createElement('li');
-            nuevoItem.innerHTML = <span>${nombre}</span> <span>$${precio}.00</span>;
+            
+            // CORRECCIÓN: Uso de backticks (`) para inyectar las variables HTML
+            nuevoItem.innerHTML = `<span>${nombre}</span> <span>$${precio}.00</span>`;
             lista.appendChild(nuevoItem);
 
-            // Actualizar total
             document.getElementById('total-precio').innerText = total.toFixed(2);
         }
 
@@ -266,12 +265,14 @@
                 alert("Añade al amor de tu vida y contactanos");
                 return;
             }
-            alert(¡Simulación de compra exitosa! Has gastado $${total}.00 en plástico inanimado de alta calidad. Tu profesor estará orgulloso.);
+            
+            // CORRECCIÓN: Uso de backticks (`) para inyectar la variable total en el alert
+            alert(`¡Simulación de compra exitosa! Has gastado $${total}.00 en plástico inanimado de alta calidad. Tu profesor estará orgulloso.`);
             
             // Reiniciar carrito
             carritoItems = [];
             total = 0;
-            document.getElementById('lista-carrito').innerHTML = '<li id="carrito-vacio">El carrito está tan vacío como los ojos de nuestros maniquíes.</li>';
+            document.getElementById('lista-carrito').innerHTML = '<li id="carrito-vacio">El carrito esta tan vacio como tu corazon sin nuestros productos.</li>';
             document.getElementById('total-precio').innerText = '0.00';
         }
     </script>
